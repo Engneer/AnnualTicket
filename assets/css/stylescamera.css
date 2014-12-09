@@ -108,8 +108,8 @@ h2{
 #camera{
 	background:url('../img/cam_bg.jpg') repeat-y;
 	border:1px solid red;
-	height:525px;
-	width:598px;
+	height:529px;
+	width:500px;
 	-position:fixed;
 	-bottom: -466px;
 	-left:30%;
@@ -150,8 +150,8 @@ h2{
 }
 
 #screen{
-	width:520px;
-	height:370px;
+	width:200px;
+	height:266px;
 	margin: 66px auto 22px;
 	background:#ccc;
 	

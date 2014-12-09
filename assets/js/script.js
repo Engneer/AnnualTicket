@@ -1,10 +1,12 @@
 $(document).ready(function(){
 	
-	var camera = $('#camera'),
+    var camera = $('#camera'),
 		photos = $('#photos'),
-		screen =  $('#screen');
+		screen = $('#screen'),
+        imgttx = $('#ctl00_ContentPlaceHolder1_imagetxt'),
+		imgHead = $('#ctl00_ContentPlaceHolder1_ImageHead');
 
-	var template = '<img src="./uploads/original/{src}" rel="cam" '
+	var template = '<img id=\"headicon\" runat=\"server\" src="./uploads/original/{src}" rel="cam" '
 		+ 'style="background-image:url(./uploads/original/{src});width:200px;height:200px"></img>';
 
 	/*----------------------------------
@@ -109,14 +111,17 @@ $(document).ready(function(){
 	//	msg.match(/[{*}]/g);
 		//console.log(msg.match(/{}/g));
 		msg = $.parseJSON(msg);
-		//console.log(msg);
+		console.log(msg);
 		//console.log(msg.error);
 		if(msg.error){
 			alert(msg.message);
 		}
 		else {
 			// Adding it to the page;
-		    photos.html(templateReplace(template, { src: msg.filename }));
+		   // photos.html(templateReplace(template, { src: msg.filename }));
+		    var s="./uploads/original/" + msg.filename;
+		    imgttx.attr("value", s);
+		    imgHead.attr("src", s);
 			//photos.prepend("<a href='www.baidu.com'>sfsdf</a>");
 		//$("<a href='www.baidu.com'>sfsdf</a>").appendTo("body");
 			initFancyBox();

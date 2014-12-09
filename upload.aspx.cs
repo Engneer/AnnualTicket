@@ -30,6 +30,8 @@ public partial class upload : System.Web.UI.Page
         log.Close();
         //WebClient myWebClient = new WebClient();
         // myWebClient.Headers["Content-type"]="application/json";
+        string tmpurl = "~/uploads/original/" + strFile;
+        Session["ImageHeadUrl"] = tmpurl;
         Response.Write("{\"status\":1,\"message\":\"Success!\",\"filename\":\"" + strFile + "\"}");
     }
     protected void Page_Load(object sender, EventArgs e)

@@ -73,10 +73,8 @@
             <td class="style5">
                 性别:</td>
             <td class="style5" style="text-align: left">
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" Width="51px">
-                    <asp:ListItem Selected="True">男</asp:ListItem>
-                    <asp:ListItem>女</asp:ListItem>
-                </asp:RadioButtonList>
+                <asp:RadioButton ID="RadioButton1" runat="server"  GroupName="sex" Text="男" />
+                <asp:RadioButton ID="RadioButton2" runat="server" GroupName="sex" Text="女" />
             </td>
         </tr>
         <tr>

@@ -35,9 +35,10 @@
                          <table class="style1">
                              <tr>
                                  <td colspan="2">
-                                     <div id="photos">
-               
-                                     </div>
+                                    <%-- <div id="photos">--%>
+                                         <asp:Image ID="ImageHead" runat="server" ImageUrl="~/uploads/original/example.jpg" />
+                                        <%-- <asp:ImageButton ID="ImageHead" runat="server" ImageUrl="~/uploads/original/example.jpg" ></asp:ImageButton>--%>
+                                    <%-- </div>--%>
 
                                  </td>
                              </tr>
@@ -45,53 +46,57 @@
                                 <td class="style2">
                                     游客卡号：</td>
                                 <td class="style2">
-                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="usernum" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     游客姓名：</td>
                                 <td class="style2">
-                                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="username" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     省份证号：</td>
                                 <td class="style2">
-                                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="useridentify" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr class="style2">
                                 <td class="style2">
                                     游客性别：</td>
                                 <td class="style3">
-                                    <asp:RadioButton ID="RadioButton1" runat="server" 
-                                        Text="男" />
-                                    <asp:RadioButton ID="RadioButton2" runat="server" Text="女" />
+                                    <asp:RadioButton ID="usersex1" runat="server"  Text="男" GroupName="sex1" />
+                                    <asp:RadioButton ID="usersex2" runat="server" Text="女" GroupName="sex1" />
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     电话号码：</td>
                                 <td class="style2">
-                                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="userphone" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     办卡类型：</td>
                                 <td class="style2">
-                                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="usertype" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                    
                                 <td class="style2">
                                     <asp:Button ID="checkButton" runat="server"  
-                                        Text="提交" />
+                                        Text="提交" OnClick="checkButton_Click" />
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button"/>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="imagetxt" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
+                          
                         </table>
                    </td>
                </tr>
