@@ -20,6 +20,7 @@ public partial class add : System.Web.UI.Page
     {
         //if (!IsPostBack) {
            // ImageHead.ImageUrl = (string)Session["ImageHeadUrl"];
+	//xuweijie test
        // }
     }
     protected void checkButton_Click(object sender, EventArgs e)
