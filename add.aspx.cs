@@ -20,6 +20,8 @@ public partial class add : System.Web.UI.Page
     {
         //if (!IsPostBack) {
            // ImageHead.ImageUrl = (string)Session["ImageHeadUrl"];
+
+        //sjfjdklfjk-----------------------------
 	//xuweijie test
        // }
     }
