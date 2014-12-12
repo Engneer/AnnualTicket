@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="add.aspx.cs" Inherits="add" Title="无标题页" %>
-
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="add.aspx.cs" Inherits="add" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
     <style type="text/css">
@@ -67,7 +66,9 @@
                                 <td class="style2">
                                     游客性别：</td>
                                 <td class="style3">
-                                    <asp:RadioButton ID="usersex1" runat="server"  Text="男" GroupName="sex1" />
+                                   <%-- <asp:RadioButton ID="usersex1" runat="server"  Text="男" GroupName="sex1" ></asp:RadioButton>
+                                    <asp:RadioButton ID="usersex2" runat="server" Text="女" GroupName="sex1" ></asp:RadioButton>--%>
+                                    <asp:RadioButton ID="usersex1" runat="server" Text="男" GroupName="sex1" />
                                     <asp:RadioButton ID="usersex2" runat="server" Text="女" GroupName="sex1" />
                                 </td>
                             </tr>
