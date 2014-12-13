@@ -48,6 +48,8 @@
                      <br />
                     <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/checktourists.aspx">查看游客信息</asp:HyperLink>
                      <br />
+                    <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/dataAnalysis.aspx">数据分析</asp:HyperLink>
+                     <br />
                 </asp:Panel>
                 <br/>
             </div>
