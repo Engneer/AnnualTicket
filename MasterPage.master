@@ -40,7 +40,7 @@
                      <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/addTourists.aspx">年票人员办理</asp:HyperLink>
                      <br />
 
-                     <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/del3.aspx">办卡人员管理</asp:HyperLink>
+                     <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/systemUserManager.aspx">办卡人员管理</asp:HyperLink>
                      <br />
                      <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/adminManager.aspx">添加办证人员</asp:HyperLink>
                      <br />

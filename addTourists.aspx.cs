@@ -13,13 +13,32 @@ using System.Xml.Linq;
 
 using MySql.Data;
 using MySql.Data.MySqlClient;
+
 public partial class addTourists : System.Web.UI.Page
 {
-
+    string MyConnectionString = "Server=localhost;Database=eats;Uid=root;Pwd=123;Charset=utf8";
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (!IsPostBack) {
-        // ImageHead.ImageUrl = (string)Session["ImageHeadUrl"];
+
+        if (!IsPostBack) {
+            MySqlConnection conn = new MySqlConnection(MyConnectionString);
+            string squeryString = "select id,levelname from levelinfo";
+            MySqlDataAdapter ad = new MySqlDataAdapter(squeryString, conn);
+            DataSet ds = new DataSet();
+            conn.Open();
+            ad.Fill(ds, "touristsType");
+            usertype.DataSource = ds.Tables["touristsType"].DefaultView;
+            usertype.SelectedIndex = -1;
+            usertype.DataValueField = ds.Tables["touristsType"].Columns[0].ColumnName;
+            usertype.DataTextField = ds.Tables["touristsType"].Columns[1].ColumnName;
+            usertype.DataBind();
+            conn.Close();
+
+
+
+            ds.Dispose();
+        }
+
 
     }
     protected void checkButton_Click(object sender, EventArgs e)
@@ -41,11 +60,11 @@ public partial class addTourists : System.Web.UI.Page
         }
         user.UserIdentify = useridentify.Text;
         user.UserPhone = userphone.Text;
-        user.UserLevel = int.Parse(usertype.Text);
+        user.UserLevel = int.Parse(this.usertype.SelectedValue);
         user.UserIsupdate = 0;
         user.UserHandleTime = DateTime.Now;
         user.UserImageUrl = (string)Session["ImageHeadUrl"];
-        string MyConnectionString = "Server=localhost;Database=eats;Uid=root;Pwd=123;Charset=utf8";
+        
         MySqlConnection conn = new MySqlConnection(MyConnectionString);
         String sqlInsert = "insert into userinfo(number,name,sex,identify,level,phone,handletime,imageurl,isupdate) values('"
             + user.UserNumber + "','" + user.UserName + "','" + user.UserSex + "','" + user.UserIdentify + "','" + user.UserLevel + "','" + user.UserPhone + "','" + user.UserHandleTime + "','" + user.UserImageUrl + "','" + user.UserIsupdate + "')";
@@ -54,5 +73,9 @@ public partial class addTourists : System.Web.UI.Page
         InsCom.ExecuteNonQuery();
         conn.Close();
         //Response.Write("<script Language='JavaScript'>alert('" + user.UserImageUrl + "')</script>");
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Write("<script Language='JavaScript'>alert("+usertype.SelectedValue+");</script>");
     }
 }

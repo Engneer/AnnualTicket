@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 
 
-public partial class del3 : System.Web.UI.Page
+public partial class systemUserManager: System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

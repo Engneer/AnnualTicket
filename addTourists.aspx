@@ -6,6 +6,15 @@
         {
             font-size: medium;
         }
+         .auto-style1
+         {
+             font-size: medium;
+             width: 270px;
+         }
+         .auto-style2
+         {
+             width: 270px;
+         }
     </style>
     <link href="assets/css/stylescamera.css" rel="stylesheet" />
 </asp:Content>
@@ -44,28 +53,28 @@
                             <tr>
                                 <td class="style2">
                                     游客卡号：</td>
-                                <td class="style2">
+                                <td class="auto-style1">
                                     <asp:TextBox ID="usernum" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     游客姓名：</td>
-                                <td class="style2">
+                                <td class="auto-style1">
                                     <asp:TextBox ID="username" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     省份证号：</td>
-                                <td class="style2">
+                                <td class="auto-style1">
                                     <asp:TextBox ID="useridentify" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr class="style2">
                                 <td class="style2">
                                     游客性别：</td>
-                                <td class="style3">
+                                <td class="auto-style2">
                                    <%-- <asp:RadioButton ID="usersex1" runat="server"  Text="男" GroupName="sex1" ></asp:RadioButton>
                                     <asp:RadioButton ID="usersex2" runat="server" Text="女" GroupName="sex1" ></asp:RadioButton>--%>
                                     <asp:RadioButton ID="usersex1" runat="server" Text="男" GroupName="sex1" />
@@ -75,27 +84,27 @@
                             <tr>
                                 <td class="style2">
                                     电话号码：</td>
-                                <td class="style2">
+                                <td class="auto-style1">
                                     <asp:TextBox ID="userphone" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="style2">
                                     办卡类型：</td>
-                                <td class="style2">
-                                    <asp:TextBox ID="usertype" runat="server"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <%--<asp:TextBox ID="usertype" runat="server"></asp:TextBox>--%>
+                                    <asp:DropDownList ID="usertype" runat="server" Font-Size="Large" Height="19px" Width="174px">
+                                    </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
                    
-                                <td class="style2">
-                                    <asp:Button ID="checkButton" runat="server"  
-                                        Text="提交" OnClick="checkButton_Click" />
-                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button"/>
+                                <td class="style2" align="center" colspan="2">
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="提交"/>
+                                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="imagetxt" runat="server"></asp:TextBox>
-                                </td>
+                                <td class="auto-style2" colspan="2">
+                                    &nbsp;</td>
                             </tr>
                           
                         </table>
