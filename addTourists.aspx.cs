@@ -13,13 +13,13 @@ using System.Xml.Linq;
 
 using MySql.Data;
 using MySql.Data.MySqlClient;
-public partial class add : System.Web.UI.Page
+public partial class addTourists : System.Web.UI.Page
 {
 
     protected void Page_Load(object sender, EventArgs e)
     {
         //if (!IsPostBack) {
-           // ImageHead.ImageUrl = (string)Session["ImageHeadUrl"];
+        // ImageHead.ImageUrl = (string)Session["ImageHeadUrl"];
 
     }
     protected void checkButton_Click(object sender, EventArgs e)
@@ -32,9 +32,11 @@ public partial class add : System.Web.UI.Page
         userinfo user = new userinfo();
         user.UserNumber = usernum.Text;
         user.UserName = username.Text;
-        if (usersex1.Checked) {
+        if (usersex1.Checked)
+        {
             user.UserSex = usersex1.Text;
-        } if (usersex2.Checked) {
+        } if (usersex2.Checked)
+        {
             user.UserSex = usersex2.Text;
         }
         user.UserIdentify = useridentify.Text;
@@ -46,7 +48,7 @@ public partial class add : System.Web.UI.Page
         string MyConnectionString = "Server=localhost;Database=eats;Uid=root;Pwd=123;Charset=utf8";
         MySqlConnection conn = new MySqlConnection(MyConnectionString);
         String sqlInsert = "insert into userinfo(number,name,sex,identify,level,phone,handletime,imageurl,isupdate) values('"
-            + user.UserNumber + "','" + user.UserName + "','" + user.UserSex + "','" + user.UserIdentify + "','" + user.UserLevel + "','" + user.UserPhone + "','" + user.UserHandleTime + "','" + user.UserImageUrl + "','" + user.UserIsupdate+ "')"; 
+            + user.UserNumber + "','" + user.UserName + "','" + user.UserSex + "','" + user.UserIdentify + "','" + user.UserLevel + "','" + user.UserPhone + "','" + user.UserHandleTime + "','" + user.UserImageUrl + "','" + user.UserIsupdate + "')";
         MySqlCommand InsCom = new MySqlCommand(sqlInsert, conn);
         conn.Open();
         InsCom.ExecuteNonQuery();

@@ -1,7 +1,7 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="add.aspx.cs" Inherits="add" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="addTourists.aspx.cs" Inherits="addTourists" %>
 
-    <style type="text/css">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+     <style type="text/css">
         .style2
         {
             font-size: medium;
@@ -10,7 +10,7 @@
     <link href="assets/css/stylescamera.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div>
+      <div>
         <div>
            <table>
                <tr>
